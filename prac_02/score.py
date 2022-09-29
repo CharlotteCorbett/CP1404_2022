@@ -18,13 +18,27 @@ Code taken from broken_score.py in prac_01, and refactored into functions
 in this program.
 """
 
-score = float(input("Enter score: "))
 
-if score < 0 or score > 100:
-    print("Invalid score")
-elif score >= 90:
-    print("Excellent")
-elif score >= 50:
-    print("Passable")
-else:
-    print("Bad")
+def main():
+    import random
+    score = float(input("Enter score: "))
+    score = determine_score(score)
+
+    print(score)
+    random_score = determine_score(random.randint(0, 100))
+    print(random_score)
+
+
+def determine_score(score):
+    if score < 0 or score > 100:
+        score = "Invalid score"
+    elif score >= 90:
+        score = "Excellent"
+    elif score >= 50:
+        score = "Passable"
+    else:
+        score = "Bad"
+    return score
+
+
+main()
