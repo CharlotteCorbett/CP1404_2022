@@ -22,14 +22,13 @@ in this program.
 def main():
     import random
     score = float(input("Enter score: "))
-    score = determine_score(score)
-
+    score = determine_score_status(score)
     print(score)
-    random_score = determine_score(random.randint(0, 100))
+    random_score = determine_score_status(random.randint(0, 100))
     print(random_score)
 
 
-def determine_score(score):
+def determine_score_status(score):
     if score < 0 or score > 100:
         score = "Invalid score"
     elif score >= 90:
