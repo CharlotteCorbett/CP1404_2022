@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical 3
+CP1404- Practical 3
 Various examples of using Python string formatting.
 (f-strings are preferred)
 Want to read more about it?
@@ -32,12 +32,13 @@ numbers = [1, 19, 123, 456, -25]
 for i, number in enumerate(numbers, 1):
     print(f"Number {i} is {number:5}")
 
-# TODO: Use f-string formatting to produce the output:
-# 1922 Gibson L-5 CES for about $16,035!
+# Display 1922 Gibson L-5 CES for about $16,035!
+print(f"{year} {name} for about ${cost:,.0f}!")
 
-# TODO: Using a for loop with the range function and string formatting,
 # produce the following right-aligned output (DO NOT use a list):
 #   0
 #  50
 # 100
 # 150
+for i in range(0, 200, 50):
+    print(f"{i:5}")
